@@ -9,7 +9,7 @@ generateKeyPair();
 
 var client = new net.Socket();
 
-client.connect(6000, '::1', function() {
+client.connect(6000, '138.68.71.75', function() {
   client.write("PING");
 });
 

@@ -10,8 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bluebird": "^3.5.1",
-    "node-rsa": "^0.4.2",
-    "ursa": "^0.9.4"
+    "crypto": "^1.0.1",
+    "node-rsa": "^0.4.2"
   }
 }
