@@ -4,8 +4,8 @@ process.stdin.setEncoding('utf8')
 
 var node = smoke.createNode({
   port: parseInt(process.argv[2]) || 8945
-, address: smoke.localIp('192.168.1.0/255.255.255.0')
-, seeds: [{port: 8500, address:'138.68.71.75'}] //<-- You may need to change this address!
+, address: '0.0.0.0'
+, seeds: [{port: 14, address:'138.68.71.75'}] //<-- You may need to change this address!
 })
 
 console.log('Port', node.options.port)
