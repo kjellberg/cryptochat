@@ -13,6 +13,7 @@ server.on("connection", function(socket) {
   socket.setEncoding("utf8")
   socket.name = generateIdentifier();
   clients.push(socket)
+  console.log("CONNECTED " + socket.name)
 
   socket.on("data", function(data) {
     console.log(socket.name + " > " + data)
@@ -33,6 +34,8 @@ server.on("connection", function(socket) {
   // Remove the client from the list when it leaves
   socket.on('end', function () {
     clients.splice(clients.indexOf(socket), 1);
+    console.log("DISCONNECTED " + socket.name)
+    console.log("CLIENTS_LEFT " + clients.length)
   })
 
   function broadcast(data) {
